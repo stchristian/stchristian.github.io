@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  margin: 0;
   background-color: var(--primary-color);
   height: 100%;
   color: var(--secondary-color);
@@ -17,7 +18,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 16px;
 }
 
 h1 {
@@ -190,6 +191,10 @@ a {
 }
 
 @media screen and (max-width: 850px) {
+  h1 {
+    font-size: 32px;
+  }
+
   .navigation-bar {
     display: block;
     position: fixed;
@@ -202,7 +207,8 @@ a {
   }
 
   .content {
-    width: 100%;
+    flex-grow: 1;
+    width: initial;
   }
 
   .nav-wrapper {
