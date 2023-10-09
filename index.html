@@ -27,18 +27,14 @@
       <div class="text">
         <img class="decoration" src="decoration-tilted.svg" alt="" />
         <div class="page page-active" data-page-url="/index">
-          <h1>Welcome</h1>
+          <h1>Hello!</h1>
           <p>
-            My name is Krisztián Hübner, I’m a front-end developer based in
-            Budapest, Hungary / Gap, France. For me, front-end is a bit similar
-            (analogous) to physical work. You’ll get a visible result when
-            you’re finished. Seeing that result is what gives me a great
-            satisfaction and drives my motivation.
+            My name is Krisztián Hübner, I’m a hungarian front-end developer. I believe that front-end development is not just about writing code; it's a form of digital craftsmanship that shares similarities with physical work. Just as a skilled artisan sees the tangible results of their labor, I take pride in crafting seamless and visually striking digital experiences.
           </p>
         </div>
         <div class="page" data-page-url="/beginnings">
           <h1>
-            The beginnings
+            A long time ago...
             <div class="time">June 2019 - September 2020</div>
           </h1>
           <p>
@@ -76,6 +72,7 @@
           </p>
         </div>
       </div>
+      <!-- PAGE END  -->
       <!-- <div class="text" data-page="/beginnings">
         <img class="decoration" src="decoration-tilted.svg" alt="" />
       </div> -->
@@ -107,7 +104,6 @@
             >
               <i class="fa-solid fa-briefcase"></i><span>Career</span>
             </a>
-          </li>
             <ul class="subnav-list">
               <li class="subnav-item">
                 <a href="/beginnings" data-href="/beginnings"
@@ -117,6 +113,7 @@
               <li class="subnav-item"><a href="">Deep dive into react</a></li>
               <li class="subnav-item"><a href="">Still in love</a></li>
             </ul>
+          </li>
           </li>
           <li>
             <a
@@ -139,6 +136,8 @@
         </ul>
       </div>
     </div>
+    <!-- NAVIGATION  END-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript">
       let toggleButton;
       let nav;
@@ -147,6 +146,14 @@
       let menuOpen = false;
       let activePageUrl = "/index";
       
+      const pageAnimation = anime({
+        targets: '.page',
+        opacity: 0,
+        translateX: -50,
+        duration: 1500,
+        direction: "reverse",
+        easing: "easeInCubic"
+      });
       
       document.addEventListener("DOMContentLoaded", (event) => {
         toggleButton = document.getElementById("menu-toggle");
@@ -183,6 +190,7 @@
             ? page.classList.add("page-active")
             : page.classList.remove("page-active")
         );
+        pageAnimation.restart();
       }
 
       function linkClicked(event) {

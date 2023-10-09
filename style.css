@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 48px;
   margin: 0 0 24px 0;
 }
 
@@ -75,6 +75,8 @@ p {
   left: 100px;
 }
 
+/* Button styles */
+
 .btn {
   display: inline-flex;
   padding: 16px 32px;
@@ -85,15 +87,24 @@ p {
   background-color: transparent;
   cursor: pointer;
   transition: 100ms;
+  margin-right: 16px;
 }
+
 .btn-primary {
   border: 2px solid var(--secondary-color);
   background: var(--secondary-color);
 }
-.btn-primary:hover {
+/* .btn-primary:hover {
   color: var(--secondary-color);
   background-color: var(--primary-color);
   border: 2px solid var(--secondary-color);
+} */
+
+.btn:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  background-color: #7ab4c1;
 }
 
 .btn-secondary {
@@ -101,10 +112,10 @@ p {
   border: 2px solid var(--secondary-color);
 }
 
-.btn-secondary:hover {
+/* .btn-secondary:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
-}
+} */
 
 /* Navigation section */
 
@@ -152,7 +163,7 @@ p {
   flex-direction: column;
   gap: 8px;
   padding-left: 64px;
-  margin-top: 8px;
+  padding-top: 8px;
 }
 
 .subnav-item a {
