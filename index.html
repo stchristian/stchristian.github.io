@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/7189bfce67.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <img class="me" src="me.svg" alt="" />
+    <div class="navigation-bar">
+      <i id="menu-toggle" class="fa-solid fa-bars"></i>
+    </div>
+    <div class="content">
+      <!-- PAGE  -->
+      <div class="text">
+        <img class="decoration" src="decoration-tilted.svg" alt="" />
+        <div class="page page-active" data-page-url="/index">
+          <h1>Welcome</h1>
+          <p>
+            My name is Krisztián Hübner, I’m a front-end developer based in
+            Budapest, Hungary / Gap, France. For me, front-end is a bit similar
+            (analogous) to physical work. You’ll get a visible result when
+            you’re finished. Seeing that result is what gives me a great
+            satisfaction and drives my motivation.
+          </p>
+        </div>
+        <div class="page" data-page-url="/beginnings">
+          <h1>
+            The beginnings
+            <div class="time">June 2019 - September 2020</div>
+          </h1>
+          <p>
+            I started working for a small company in the summer of 2019. This
+            was the place where I got to know the fundamentals of development. I
+            had the chance to solve tasks on both front-end and back-end. At the
+            company we followed strictly the SCRUM methodology for agile
+            development.
+          </p>
+          <div>
+            <button class="btn btn-secondary">More details</button>
+            <button class="btn btn-primary">Next</button>
+          </div>
+        </div>
+        <div class="page" data-page-url="/hobbies">
+          <h1>
+            My hobbies
+          </h1>
+          <p>
+            Since my childhood I've been a fan of playing guitar. I have four guitars for different genres of music. It's an activity that helps me relax and be creative.
+          </p>
+          <p>
+            I enjoy sports as well. Some days I play ping pong, other days I just go running or biking. However, my newest passion is climbing.
+          </p>
+        </div>
+        <div class="page" data-page-url="/languages">
+          <h1>
+            Excuse me?!
+          </h1>
+          <p>
+            I have a B2 proficiency level in both German and English. I am particularly confident in the latter, as I use English nearly every day.
+            I learned French when I did a volunteering in France and I constantly devote time and effort to improving my speaking and writing skills.
+          </p>
+          <p>
+          </p>
+        </div>
+      </div>
+      <!-- <div class="text" data-page="/beginnings">
+        <img class="decoration" src="decoration-tilted.svg" alt="" />
+      </div> -->
+      <!-- SOCIAL LINK  -->
+      <div class="social-links">
+        <a target="_blank" href="https://github.com/stchristian">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/christianhubner/">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a target="_blank" href="">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+      <!-- NAVIGATION -->
+      <div class="nav-wrapper">
+        <ul class="nav-list">
+          <li>
+            <a class="nav-list-item active-link" href="/index" data-href="/index">
+              <i class="fa-solid fa-pen"></i><span>About me</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="nav-list-item"
+              href="/beginnings"
+              data-href="/beginnings"
+            >
+              <i class="fa-solid fa-briefcase"></i><span>Career</span>
+            </a>
+          </li>
+            <ul class="subnav-list">
+              <li class="subnav-item">
+                <a href="/beginnings" data-href="/beginnings"
+                  >As a full stack developer</a
+                >
+              </li>
+              <li class="subnav-item"><a href="">Deep dive into react</a></li>
+              <li class="subnav-item"><a href="">Still in love</a></li>
+            </ul>
+          </li>
+          <li>
+            <a
+              class="nav-list-item"
+              href="/hobbies"
+              data-href="/hobbies"
+            >
+              <i class="fa-solid fa-guitar"></i><span>Hobbies</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="nav-list-item"
+              href="/languages"
+              data-href="/languages"
+            >
+              <i class="fa-solid fa-globe"></i><span>Languages</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      let toggleButton;
+      let nav;
+      let links;
+      let pages = [];
+      let menuOpen = false;
+      let activePageUrl = "/index";
+      
+      
+      document.addEventListener("DOMContentLoaded", (event) => {
+        toggleButton = document.getElementById("menu-toggle");
+        nav = document.querySelector(".nav-wrapper");
+        pages = Array.from(document.querySelectorAll(".page"));
+
+        links = document.querySelectorAll("a");
+        links.forEach((link) => link.addEventListener("click", linkClicked))
+
+        toggleButton.addEventListener("click", toggleMobileMenu);
+        loadPage(activePageUrl);
+      });
+
+      function toggleMobileMenu() {
+        menuOpen = !menuOpen;
+        if (menuOpen) {
+          nav.classList.add("open");
+          toggleButton.classList.add("fa-xmark");
+          toggleButton.classList.remove("fa-bars");
+        } else {
+          nav.classList.remove("open");
+          toggleButton.classList.remove("fa-xmark");
+          toggleButton.classList.add("fa-bars");
+        }
+      }
+
+      // Handle navigation
+      function loadPage(newUrl) {
+        if (activePageUrl == newUrl) return;
+        activePageUrl = newUrl;
+        // window.history.pushState({}, "", newUrl);
+        pages.forEach((page) =>
+          page.dataset.pageUrl === activePageUrl
+            ? page.classList.add("page-active")
+            : page.classList.remove("page-active")
+        );
+      }
+
+      function linkClicked(event) {
+        if (typeof event.currentTarget.dataset.href == 'undefined') return;
+        event.preventDefault();
+        links.forEach(link => link === event.currentTarget ? link.classList.add("active-link") : link.classList.remove("active-link"));
+        loadPage(event.currentTarget.dataset.href);
+        if(menuOpen) toggleMobileMenu();
+      }
+    </script>
+  </body>
+</html>
