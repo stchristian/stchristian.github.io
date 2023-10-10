@@ -7,15 +7,9 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/7189bfce67.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/7189bfce67.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <img class="me" src="me.svg" alt="" />
@@ -25,51 +19,106 @@
     <div class="content">
       <!-- PAGE  -->
       <div class="text">
-        <img class="decoration" src="decoration-tilted.svg" alt="" />
+        <!-- <img class="decoration" src="decoration-tilted.svg" alt="" /> -->
+        <object data="decoration-tilted.svg" class="decoration" type="image/svg+xml" id="alphasvg"></object>
         <div class="page page-active" data-page-url="/index">
           <h1>Hello!</h1>
           <p>
-            My name is Krisztián Hübner, I’m a hungarian front-end developer. I believe that front-end development is not just about writing code; it's a form of digital craftsmanship that shares similarities with physical work. Just as a skilled artisan sees the tangible results of their labor, I take pride in crafting seamless and visually striking digital experiences.
+            My name is Krisztián Hübner, I’m a hungarian front-end developer. I believe that front-end development is
+            not just about writing code; it's a form of digital craftsmanship that shares similarities with physical
+            work. Just as a skilled artisan sees the tangible results of their labor, I take pride in crafting seamless
+            and visually striking digital experiences.
           </p>
         </div>
-        <div class="page" data-page-url="/beginnings">
+        <div class="page" data-page-url="/chapter/one">
           <h1>
             A long time ago...
             <div class="time">June 2019 - September 2020</div>
           </h1>
           <p>
-            I started working for a small company in the summer of 2019. This
-            was the place where I got to know the fundamentals of development. I
-            had the chance to solve tasks on both front-end and back-end. At the
-            company we followed strictly the SCRUM methodology for agile
-            development.
+            In my role as Full Stack Developer, I contributed to a platform enabling digital contracts, focusing on
+            features for users to create and sign documents. Utilizing Vue.js and Vuex for the front end and Express
+            with knex and MySQL for the backend, I also gained insights into payment gateway operations. Transitioning
+            to a new project, I became part of a team developing a Jira-integrated application for running retro
+            ceremonies. Responsibilities included understanding add-on development documentation, establishing the
+            initial architecture, and implementing real-time functionality using server-sent events (SSE) and Redis
+            store. We were following the practices of Scrum methodology on a daily basis. This experience enhanced
+            collaborative skills within a dynamic team, and reinforced the importance of a proactive approach in the
+            workplace.
           </p>
-          <div>
+          <a class="btn btn-primary" href="/chapter/two" data-href="/chapter/two">Next</a>
+          <!-- <div>
             <button class="btn btn-secondary">More details</button>
             <button class="btn btn-primary">Next</button>
-          </div>
+          </div> -->
         </div>
-        <div class="page" data-page-url="/hobbies">
+        <div class="page" data-page-url="/chapter/two">
           <h1>
-            Hobbits and habits
+            How would you <i>React</i>?
+            <div class="time">September 2020 - May 2022</div>
           </h1>
           <p>
-            Since my childhood I've been a fan of playing guitar. I have four guitars for different genres of music. It's an activity that helps me relax and be creative.
+            In a team working on an e-commerce wine and spirit trading platform for a British client, our focus was
+            migrating their legacy system to Node.js with a GraphQL API. While maintaining and adding features to the
+            frontend applications, my role predominantly involved front-end development using React, Redux, Storybook,
+            Tailwind, styled-components, and MUI. The technology stack also included Shopify, Stripe, and Azure. I took
+            on the responsibility of a client application, gaining a profound understanding of the applications and
+            their architecture. This led to active participation in technical decision-making, task assignment, and
+            explaining tasks to other developers, providing valuable insights into effective collaboration and
+            leadership.
+          </p>
+          <a class="btn btn-secondary" href="/chapter/one" data-href="/chapter/one">Previous</a>
+          <a class="btn btn-primary" href="/chapter/three" data-href="/chapter/three">Next</a>
+        </div>
+        <div class="page" data-page-url="/chapter/three">
+          <h1>
+            Wolfs of Wall Street
+            <div class="time">May 2022 - December 2022</div>
+          </h1>
+          <p>
+            At a large finance company , I contributed to a small team working on a greenfield project that allowed
+            clients to build custom indexes using React and the Fluent component library, connected to a Java-based
+            backend. My responsibilities included implementing features, bug fixing, writing tests with Jest, and
+            refactoring. This experience provided valuable insights into large-scale company operations, and on the
+            technical side, expanded my knowledge in testing methodologies.
+          </p>
+          <a class="btn btn-secondary" href="/chapter/two" data-href="/chapter/two">Previous</a>
+        </div>
+        <div class="page" data-page-url="/hobbies">
+          <h1>Hobbits and habits</h1>
+          <p>
+            Since my childhood I've been a fan of playing guitar. I have four guitars for different genres of music.
+            It's an activity that helps me relax and be creative.
           </p>
           <p>
-            I enjoy sports as well. Some days I play ping pong, other days I just go running or biking. However, my newest passion is climbing.
+            I enjoy sports as well. Some days I play ping pong, other days I just go running or biking. However, my
+            newest passion is climbing.
           </p>
         </div>
         <div class="page" data-page-url="/languages">
+          <h1>Excuse me?!</h1>
+          <p>
+            I have a B2 proficiency level in both German and English. I am particularly confident in the latter, as I
+            use English nearly every day. I learned French when I did a volunteering in France and I constantly devote
+            time and effort to improving my speaking and writing skills.
+          </p>
+          <p></p>
+        </div>
+        <div class="page" data-page-url="/volunteering">
           <h1>
-            Excuse me?!
+            La Solidarité
+            <div class="time">February 2023 - August 2023</div>
           </h1>
           <p>
-            I have a B2 proficiency level in both German and English. I am particularly confident in the latter, as I use English nearly every day.
-            I learned French when I did a volunteering in France and I constantly devote time and effort to improving my speaking and writing skills.
+            I wanted to try something completely different in my life, unrelated to my profession, aiming to discover an
+            alternative way of life. This led me to volunteer in France, in a charming village called Vaunières, where I
+            worked for the association of Villages des Jeunes. Nestled in the mountains, surrounded by nature, the
+            village serves as a hosting centre for various groups. My responsibilities covered a wide range of tasks,
+            from facilitating group activities, to everyday chores, all the way to preserving the historical heritage of
+            the village. During the almost seven months I spent as a volunteer, I gained invaluable insights into the
+            importance of a collective life.
           </p>
-          <p>
-          </p>
+          <p></p>
         </div>
       </div>
       <!-- PAGE END  -->
@@ -97,39 +146,29 @@
             </a>
           </li>
           <li>
-            <a
-              class="nav-list-item"
-              href="/beginnings"
-              data-href="/beginnings"
-            >
+            <a class="nav-list-item" href="/chapter" data-href="/chapter" data-redirect="/chapter/one">
               <i class="fa-solid fa-briefcase"></i><span>Career</span>
             </a>
             <ul class="subnav-list">
               <li class="subnav-item">
-                <a href="/beginnings" data-href="/beginnings"
-                  >As a full stack developer</a
-                >
+                <a href="/beginnings" data-href="/chapter/one">As a full stack developer</a>
               </li>
-              <li class="subnav-item"><a href="">Deep dive into react</a></li>
-              <li class="subnav-item"><a href="">Still in love</a></li>
+              <li class="subnav-item"><a href="/chapter/two" data-href="/chapter/two">Deep dive into react</a></li>
+              <li class="subnav-item"><a href="/chapter/three" data-href="/chapter/three">Still in love</a></li>
             </ul>
           </li>
-          </li>
           <li>
-            <a
-              class="nav-list-item"
-              href="/hobbies"
-              data-href="/hobbies"
-            >
+            <a class="nav-list-item" href="/hobbies" data-href="/hobbies">
               <i class="fa-solid fa-guitar"></i><span>Hobbies</span>
             </a>
           </li>
           <li>
-            <a
-              class="nav-list-item"
-              href="/languages"
-              data-href="/languages"
-            >
+            <a class="nav-list-item" href="/volunteering" data-href="/volunteering">
+              <i class="fa-solid fa-handshake-angle"></i><span>Volunteering</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-list-item" href="/languages" data-href="/languages">
               <i class="fa-solid fa-globe"></i><span>Languages</span>
             </a>
           </li>
@@ -137,7 +176,12 @@
       </div>
     </div>
     <!-- NAVIGATION  END-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="text/javascript">
       let toggleButton;
       let nav;
@@ -145,23 +189,27 @@
       let pages = [];
       let menuOpen = false;
       let activePageUrl = "/index";
-      
+
+      // ANIMATIONS
       const pageAnimation = anime({
-        targets: '.page',
+        targets: ".page",
         opacity: 0,
         translateX: -50,
         duration: 1500,
         direction: "reverse",
-        easing: "easeInCubic"
+        easing: "easeInCubic",
       });
-      
+
+      const svg = document.getElementById("alphasvg");
+      console.dir(svg);
+
       document.addEventListener("DOMContentLoaded", (event) => {
         toggleButton = document.getElementById("menu-toggle");
         nav = document.querySelector(".nav-wrapper");
         pages = Array.from(document.querySelectorAll(".page"));
 
         links = document.querySelectorAll("a");
-        links.forEach((link) => link.addEventListener("click", linkClicked))
+        links.forEach((link) => link.addEventListener("click", linkClicked));
 
         toggleButton.addEventListener("click", toggleMobileMenu);
         loadPage(activePageUrl);
@@ -190,15 +238,20 @@
             ? page.classList.add("page-active")
             : page.classList.remove("page-active")
         );
+        links.forEach((link) =>
+          newUrl.startsWith(link.dataset.href)
+            ? link.classList.add("active-link")
+            : link.classList.remove("active-link")
+        );
         pageAnimation.restart();
       }
 
       function linkClicked(event) {
-        if (typeof event.currentTarget.dataset.href == 'undefined') return;
+        if (typeof event.currentTarget.dataset.href == "undefined") return;
         event.preventDefault();
-        links.forEach(link => link === event.currentTarget ? link.classList.add("active-link") : link.classList.remove("active-link"));
-        loadPage(event.currentTarget.dataset.href);
-        if(menuOpen) toggleMobileMenu();
+        const { redirect, href } = event.currentTarget.dataset;
+        loadPage(redirect ?? href);
+        if (menuOpen) toggleMobileMenu();
       }
     </script>
   </body>
