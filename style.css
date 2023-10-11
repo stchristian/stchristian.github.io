@@ -9,20 +9,45 @@ html {
   height: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 10px;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: var(--primary-color);
   height: 100%;
+  background-color: var(--primary-color);
   color: var(--secondary-color);
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
   font-family: "JetBrains Mono", monospace;
   display: flex;
-  /* align-items: center; */
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
   padding: 16px;
+}
+
+.description {
+  max-height: 260px;
+  overflow-y: scroll;
+  padding-right: 32px;
+  margin-bottom: 16px;
 }
 
 h1 {
@@ -38,6 +63,11 @@ p {
 
 .page {
   display: none;
+  border-top: 2px solid;
+  border-left: 4px solid;
+  border-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  padding: 32px 64px;
 }
 
 .page-active {
@@ -49,8 +79,9 @@ p {
   display: flex;
   flex-direction: row;
   align-items: start;
-  margin-top: 256px;
-  gap: 128px;
+  margin-top: 164px;
+  margin-bottom: 32px;
+  gap: 64px;
 }
 
 .text {
@@ -63,18 +94,20 @@ p {
   font-size: 16px;
 }
 
-.decoration {
-  position: absolute;
-  left: -356px;
-  top: -423px;
-  z-index: -1;
+.main-animation {
+  position: fixed;
+  left: -395px;
+  top: -53px;
+  width: 1000px;
+  transform: rotate(100deg);
+  z-index: -5;
 }
 
 .me {
-  position: fixed;
-  bottom: 0;
-  max-height: 200px;
-  left: 100px;
+  position: absolute;
+  top: -150px;
+  left: 32px;
+  height: 150px;
 }
 
 /* Button styles */
@@ -132,6 +165,7 @@ p {
   border-style: solid;
   flex-basis: 300px;
   padding: 48px 32px;
+  position: relative;
 }
 
 .nav-list {
@@ -196,8 +230,8 @@ a {
 
 .social-links {
   position: fixed;
-  top: 64px;
-  right: 64px;
+  top: 32px;
+  right: 32px;
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -225,10 +259,25 @@ a {
     position: fixed;
     display: flex;
     flex-direction: row-reverse;
-    padding: 8px;
+    padding: 16px;
     top: 0;
     left: 0;
     right: 0;
+  }
+
+  .description {
+    max-height: initial;
+    padding-right: 0;
+    text-align: justify;
+  }
+
+  .page {
+    padding: 0;
+    border: none;
+  }
+
+  .main-animation {
+    display: none;
   }
 
   .content {
@@ -257,10 +306,8 @@ a {
     display: none;
   }
   .social-links {
-    bottom: 8px;
-    left: 0px;
-    right: 0px;
+    position: initial;
     justify-content: center;
-    top: initial;
+    /* margin-bottom: 16px; */
   }
 }
