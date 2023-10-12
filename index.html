@@ -219,7 +219,7 @@
         <a target="_blank" href="https://www.linkedin.com/in/christianhubner/">
           <i class="fa-brands fa-linkedin"></i>
         </a>
-        <a target="_blank" href="">
+        <a href="mailto:krisztianhubner@gmail.com">
           <i class="fa-solid fa-envelope"></i>
         </a>
       </div>
@@ -287,6 +287,7 @@
       function linkClicked(event) {
         if (menuOpen) toggleMobileMenu();
         if (typeof event.currentTarget.dataset.href == "undefined") return;
+        console.log("OO");
         event.preventDefault();
         const { redirect, href } = event.currentTarget.dataset;
         loadPage(redirect ?? href);
