@@ -16,7 +16,7 @@
       property="og:description"
       content="I’m a front-end developer who wants to help make the internet a more creative, accessible, and better place."
     />
-    <meta property="og:image" content="og.png" />
+    <meta property="og:image" content="/og.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="favicon.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
@@ -31,7 +31,6 @@
       <div class="content">
         <!-- PAGE  -->
         <div class="text">
-          <!-- <img class="decoration" src="decoration-tilted.svg" alt="" /> -->
           <svg
             class="main-animation"
             width="1711"
@@ -61,15 +60,16 @@
             <rect x="1664" y="382" width="20" height="641" fill="#E8D5B5" />
           </svg>
 
-          <!-- <object data="decoration-tilted.svg" class="decoration" type="image/svg+xml" id="alphasvg"></object> -->
           <div class="page page-active" data-page-url="/index">
             <h1>Hello!</h1>
-            <p>
-              My name is Krisztián Hübner, I’m a hungarian front-end developer. I believe that front-end development is
-              not just about writing code; it's a form of digital craftsmanship that shares similarities with physical
-              work. Just as a skilled artisan sees the tangible results of their labor, I take pride in crafting
-              seamless and visually striking digital experiences.
-            </p>
+            <div class="description">
+              <p>
+                My name is Krisztián Hübner, I’m a hungarian front-end developer. I believe that front-end development
+                is not just about writing code; it's a form of digital craftsmanship that shares similarities with
+                physical work. Just as a skilled artisan sees the tangible results of their labor, I take pride in
+                crafting seamless and visually striking digital experiences.
+              </p>
+            </div>
           </div>
           <div class="page" data-page-url="/chapter/one">
             <h1>
@@ -90,10 +90,6 @@
               </p>
             </div>
             <a class="btn btn-primary" href="/chapter/two" data-href="/chapter/two">Next</a>
-            <!-- <div>
-              <button class="btn btn-secondary">More details</button>
-              <button class="btn btn-primary">Next</button>
-            </div> -->
           </div>
           <div class="page" data-page-url="/chapter/two">
             <h1>
@@ -173,10 +169,7 @@
           </div>
         </div>
         <!-- PAGE END  -->
-        <!-- <div class="text" data-page="/beginnings">
-          <img class="decoration" src="decoration-tilted.svg" alt="" />
-        </div> -->
-        <!-- SOCIAL LINK  -->
+
         <!-- NAVIGATION -->
         <div class="nav-wrapper">
           <img class="me" src="me.svg" alt="" />
@@ -216,7 +209,9 @@
             </li>
           </ul>
         </div>
+        <!-- NAVIGATION  END-->
       </div>
+      <!-- SOCIAL LINKS  -->
       <div class="social-links">
         <a target="_blank" href="https://github.com/stchristian">
           <i class="fa-brands fa-github"></i>
@@ -228,8 +223,8 @@
           <i class="fa-solid fa-envelope"></i>
         </a>
       </div>
+      <!-- SOCIAL LINKS END  -->
     </div>
-    <!-- NAVIGATION  END-->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
       integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
@@ -244,28 +239,6 @@
       let menuOpen = false;
       let activePageUrl = "/index";
 
-      // ANIMATIONS
-      const pageAnimation = anime({
-        targets: ".page",
-        opacity: 0,
-        translateX: -50,
-        duration: 1500,
-        direction: "reverse",
-        easing: "easeInCubic",
-      });
-      anime({
-        targets: "rect",
-        translateY: [0, 100, 0],
-        duration: 2000,
-        delay: anime.stagger(100),
-        autoplay: true,
-        direction: "alternate",
-        loop: true,
-      });
-
-      const svg = document.getElementById("alphasvg");
-      console.dir(svg);
-
       document.addEventListener("DOMContentLoaded", (event) => {
         toggleButton = document.getElementById("menu-toggle");
         nav = document.querySelector(".nav-wrapper");
@@ -275,7 +248,9 @@
         links.forEach((link) => link.addEventListener("click", linkClicked));
 
         toggleButton.addEventListener("click", toggleMobileMenu);
+
         loadPage(activePageUrl);
+        loadAnimations();
       });
 
       function toggleMobileMenu() {
@@ -310,11 +285,31 @@
       }
 
       function linkClicked(event) {
+        if (menuOpen) toggleMobileMenu();
         if (typeof event.currentTarget.dataset.href == "undefined") return;
         event.preventDefault();
         const { redirect, href } = event.currentTarget.dataset;
         loadPage(redirect ?? href);
-        if (menuOpen) toggleMobileMenu();
+      }
+
+      function loadAnimations() {
+        anime({
+          targets: ".page",
+          opacity: 0,
+          translateX: -50,
+          duration: 1500,
+          direction: "reverse",
+          easing: "easeInCubic",
+        });
+        anime({
+          targets: "rect",
+          translateY: [0, 100, 0],
+          duration: 2000,
+          delay: anime.stagger(100),
+          autoplay: true,
+          direction: "alternate",
+          loop: true,
+        });
       }
     </script>
   </body>
