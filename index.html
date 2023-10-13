@@ -9,6 +9,7 @@
     />
     <title>Front End Developer | Krisztián Hübner</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="hamburger.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <meta property="og:title" content="Front End Developer | Krisztián Hübner" />
     <meta property="og:type" content="profile" />
@@ -24,7 +25,16 @@
   </head>
   <body>
     <div class="navigation-bar">
-      <i id="menu-toggle" class="fa-solid fa-bars"></i>
+      <div class="menu cross menu--1">
+        <label>
+          <input id="hamburgerMenu" type="checkbox" />
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
+            <path class="line--2" d="M0 50h70" />
+            <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
+          </svg>
+        </label>
+      </div>
     </div>
 
     <div class="wrapper">
@@ -236,33 +246,28 @@
       let nav;
       let links;
       let pages = [];
-      let menuOpen = false;
       let activePageUrl = "/index";
+      let pageAnimation;
 
       document.addEventListener("DOMContentLoaded", (event) => {
-        toggleButton = document.getElementById("menu-toggle");
+        toggleButton = document.getElementById("hamburgerMenu");
         nav = document.querySelector(".nav-wrapper");
         pages = Array.from(document.querySelectorAll(".page"));
 
         links = document.querySelectorAll("a");
         links.forEach((link) => link.addEventListener("click", linkClicked));
 
-        toggleButton.addEventListener("click", toggleMobileMenu);
+        toggleButton.addEventListener("click", openOrCloseMenu);
 
         loadPage(activePageUrl);
         loadAnimations();
       });
 
-      function toggleMobileMenu() {
-        menuOpen = !menuOpen;
-        if (menuOpen) {
+      function openOrCloseMenu() {
+        if (toggleButton.checked) {
           nav.classList.add("open");
-          toggleButton.classList.add("fa-xmark");
-          toggleButton.classList.remove("fa-bars");
         } else {
           nav.classList.remove("open");
-          toggleButton.classList.remove("fa-xmark");
-          toggleButton.classList.add("fa-bars");
         }
       }
 
@@ -270,7 +275,6 @@
       function loadPage(newUrl) {
         if (activePageUrl == newUrl) return;
         activePageUrl = newUrl;
-        // window.history.pushState({}, "", newUrl);
         pages.forEach((page) =>
           page.dataset.pageUrl === activePageUrl
             ? page.classList.add("page-active")
@@ -285,16 +289,18 @@
       }
 
       function linkClicked(event) {
-        if (menuOpen) toggleMobileMenu();
+        if (toggleButton.checked) {
+          toggleButton.checked = false;
+          openOrCloseMenu();
+        }
         if (typeof event.currentTarget.dataset.href == "undefined") return;
-        console.log("OO");
         event.preventDefault();
         const { redirect, href } = event.currentTarget.dataset;
         loadPage(redirect ?? href);
       }
 
       function loadAnimations() {
-        anime({
+        pageAnimation = anime({
           targets: ".page",
           opacity: 0,
           translateX: -50,
