@@ -297,29 +297,28 @@
             ? link.classList.add("active-link")
             : link.classList.remove("active-link")
         );
-        pageAnimation.restart();
-      }
-
-      function linkClicked(event) {
-        if (toggleButton.checked) {
-          toggleButton.checked = false;
-          openOrCloseMenu();
-        }
-        if (typeof event.currentTarget.dataset.href == "undefined") return;
-        event.preventDefault();
-        const { redirect, href } = event.currentTarget.dataset;
-        loadPage(redirect ?? href);
-      }
-
-      function loadAnimations() {
         pageAnimation = anime({
-          targets: ".page",
+          targets: ".page-active",
           opacity: 0,
           translateX: -50,
           duration: 1500,
           direction: "reverse",
           easing: "easeInCubic",
         });
+      }
+
+      function linkClicked(event) {
+        if (typeof event.currentTarget.dataset.href == "undefined") return;
+        if (toggleButton.checked) {
+          toggleButton.checked = false;
+          openOrCloseMenu();
+        }
+        event.preventDefault();
+        const { redirect, href } = event.currentTarget.dataset;
+        loadPage(redirect ?? href);
+      }
+
+      function loadAnimations() {
         anime({
           targets: "rect",
           translateY: [0, 100, 0],
