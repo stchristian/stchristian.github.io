@@ -270,8 +270,7 @@
         links.forEach((link) => link.addEventListener("click", linkClicked));
 
         toggleButton.addEventListener("click", openOrCloseMenu);
-        activePageUrl = window.location.pathname ?? "/";
-        loadPage(activePageUrl);
+        loadPage(window.location.pathname ?? "/");
         loadAnimations();
       });
 
