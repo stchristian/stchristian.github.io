@@ -64,10 +64,6 @@ p {
 
 .page {
   display: none;
-  border-top: 2px solid;
-  border-left: 4px solid;
-  border-color: var(--secondary-color);
-  background-color: var(--primary-color);
   padding: 32px 64px;
 }
 
@@ -89,6 +85,10 @@ p {
   flex: 1 0 0;
   position: relative;
   overflow: hidden;
+  border-top: 2px solid;
+  border-left: 4px solid;
+  border-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 .time {
