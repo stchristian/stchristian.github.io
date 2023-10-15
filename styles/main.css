@@ -257,7 +257,7 @@ address {
     padding: 16px;
   }
 
-  .description {
+  main {
     max-height: initial;
     padding-right: 0;
     text-align: justify;
@@ -278,7 +278,7 @@ address {
     margin-top: 64px;
   }
 
-  .nav-wrapper {
+  nav {
     display: block;
     position: fixed;
     left: 0;
@@ -300,7 +300,7 @@ address {
     display: none;
   }
 
-  .social-links {
+  address {
     position: initial;
     justify-content: center;
   }
