@@ -39,7 +39,7 @@
     <div class="navigation-bar">
       <div class="menu cross menu--1">
         <label>
-          <input id="hamburgerMenu" type="checkbox" />
+          <input id="hamburgerMenu" name="hamburgerMenu" type="checkbox" />
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
             <path class="line--2" d="M0 50h70" />
@@ -52,7 +52,7 @@
     <div class="wrapper">
       <div class="content">
         <!-- PAGE  -->
-        <div class="text">
+        <main>
           <svg
             class="main-animation"
             width="1711"
@@ -94,10 +94,12 @@
             </div>
           </div>
           <div class="page" data-page-url="/career/one">
-            <h1>
-              A long time ago...
-              <div class="time">June 2019 - September 2020</div>
-            </h1>
+            <header>
+              <h1>A long time ago...</h1>
+              <div class="time">
+                <time datetime="2019-06">June 2019</time> - <time datetime="2020-09">September 2020</time>
+              </div>
+            </header>
             <div class="description">
               <p>
                 In my role as Full Stack Developer, I contributed to a platform enabling digital contracts, focusing on
@@ -114,10 +116,12 @@
             <a class="btn btn-primary" href="/career/two" data-href="/career/two">Next</a>
           </div>
           <div class="page" data-page-url="/career/two">
-            <h1>
-              How would you <i>React</i>?
-              <div class="time">September 2020 - May 2022</div>
-            </h1>
+            <header>
+              <h1>How would you <i>React</i>?</h1>
+              <div class="time">
+                <time datetime="2020-11">September 2020</time> - <time datetime="2022-05">May 2022</time>
+              </div>
+            </header>
             <div class="description">
               <p>
                 In a team working on an e-commerce wine and spirit trading platform for a British client, our focus was
@@ -134,10 +138,12 @@
             <a class="btn btn-primary" href="/career/three" data-href="/career/three">Next</a>
           </div>
           <div class="page" data-page-url="/career/three">
-            <h1>
-              Wolfs of Wall Street
-              <div class="time">May 2022 - December 2022</div>
-            </h1>
+            <header>
+              <h1>Wolfs of Wall Street</h1>
+              <div class="time">
+                <time datetime="2022-05">May 2022</time> - <time datetime="2022-12">December 2022</time>
+              </div>
+            </header>
             <div class="description">
               <p>
                 At a large finance company , I contributed to a small team working on a greenfield project that allowed
@@ -173,10 +179,12 @@
             </div>
           </div>
           <div class="page" data-page-url="/volunteering">
-            <h1>
-              La Solidarité
-              <div class="time">February 2023 - August 2023</div>
-            </h1>
+            <header>
+              <h1>La Solidarité</h1>
+              <div class="time">
+                <time datetime="2023-02">February 2023 </time>- <time datetime="2023-08">August 2023</time>
+              </div>
+            </header>
             <div class="description">
               <p>
                 I wanted to try something completely different in my life, unrelated to my profession, aiming to
@@ -189,11 +197,11 @@
               </p>
             </div>
           </div>
-        </div>
+        </main>
         <!-- PAGE END  -->
 
         <!-- NAVIGATION -->
-        <div class="nav-wrapper">
+        <nav>
           <img class="me" src="/img/me.svg" alt="" />
 
           <ul class="nav-list">
@@ -230,11 +238,11 @@
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
         <!-- NAVIGATION  END-->
       </div>
       <!-- SOCIAL LINKS  -->
-      <div class="social-links">
+      <address class="social-links">
         <a target="_blank" href="https://github.com/stchristian">
           <i class="fa-brands fa-github"></i>
         </a>
@@ -244,7 +252,7 @@
         <a href="mailto:krisztianhubner@gmail.com">
           <i class="fa-solid fa-envelope"></i>
         </a>
-      </div>
+      </address>
       <!-- SOCIAL LINKS END  -->
     </div>
     <script
@@ -253,7 +261,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script type="text/javascript">
+    <script>
       let toggleButton;
       let nav;
       let links;

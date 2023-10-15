@@ -44,11 +44,20 @@ body {
   padding: 16px;
 }
 
-.description {
-  max-height: 260px;
-  overflow-y: scroll;
-  padding-right: 32px;
-  margin-bottom: 16px;
+.content {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin-top: 164px;
+  margin-bottom: 32px;
+  gap: 64px;
+}
+
+main {
+  flex: 1 0 0;
+  position: relative;
+  /* overflow: hidden; */
 }
 
 h1 {
@@ -64,6 +73,10 @@ p {
 
 .page {
   display: none;
+  border-top: 2px solid;
+  border-left: 4px solid;
+  border-color: var(--secondary-color);
+  background-color: var(--primary-color);
   padding: 32px 64px;
 }
 
@@ -71,24 +84,11 @@ p {
   display: block;
 }
 
-.content {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  margin-top: 164px;
-  margin-bottom: 32px;
-  gap: 64px;
-}
-
-.text {
-  flex: 1 0 0;
-  position: relative;
-  overflow: hidden;
-  border-top: 2px solid;
-  border-left: 4px solid;
-  border-color: var(--secondary-color);
-  background-color: var(--primary-color);
+.description {
+  max-height: 260px;
+  overflow-y: scroll;
+  padding-right: 32px;
+  margin-bottom: 16px;
 }
 
 .time {
@@ -149,7 +149,7 @@ p {
 
 /* Navigation section */
 
-.nav-wrapper {
+nav {
   border-left-width: 4px;
   border-top-width: 2px;
   border-bottom-width: 2px;
@@ -221,7 +221,7 @@ a {
   font-size: 24px;
 }
 
-.social-links {
+address {
   position: fixed;
   top: 32px;
   right: 32px;
