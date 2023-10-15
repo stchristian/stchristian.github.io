@@ -288,7 +288,7 @@ address {
     top: 0;
     border: 0;
     padding-top: 48px;
-    transition: clip-path 1.5s;
+    transition: clip-path 1s;
     clip-path: circle(0% at 95% -5%);
   }
 
