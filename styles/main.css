@@ -86,8 +86,9 @@ p {
 }
 
 .text {
-  flex: 1 1 0;
+  flex: 1 0 0;
   position: relative;
+  overflow: hidden;
 }
 
 .time {
@@ -124,6 +125,7 @@ p {
   cursor: pointer;
   transition: 100ms;
   margin-right: 16px;
+  margin-bottom: 16px;
   font-size: 16px;
 }
 
@@ -233,6 +235,12 @@ a {
   position: relative;
   z-index: 1;
   overflow: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+  .content {
+    width: 95vw;
+  }
 }
 
 /* Mobile style */
