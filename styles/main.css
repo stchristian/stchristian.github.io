@@ -257,7 +257,7 @@ address {
     padding: 16px;
   }
 
-  main {
+  .description {
     max-height: initial;
     padding-right: 0;
     text-align: justify;
