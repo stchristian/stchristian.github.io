@@ -8,6 +8,11 @@
 html {
   height: 100%;
   margin: 0;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.print-only {
+  display: none;
 }
 
 * {
@@ -35,7 +40,6 @@ body {
 
 .wrapper {
   width: 100%;
-  font-family: "JetBrains Mono", monospace;
   display: flex;
   flex-direction: column;
   align-items: center;

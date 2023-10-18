@@ -1,0 +1,110 @@
+:root {
+  --page-margin: 5mm;
+}
+
+@page {
+  size: A4 portrait;
+}
+
+body {
+  background-color: transparent;
+  color: var(--primary-color);
+  font-family: "Poppins";
+  line-height: 1.3;
+  font-size: 12pt;
+  font-weight: 300;
+}
+
+p {
+  line-height: inherit;
+}
+
+a {
+  font-size: inherit;
+}
+
+.fa-solid,
+.fa-brands {
+  vertical-align: baseline;
+}
+
+.navigation-bar,
+.main-animation,
+.btn,
+address,
+svg,
+img,
+nav,
+.print-hidden {
+  display: none;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 2.5mm;
+}
+
+.print-only {
+  display: block;
+}
+
+.time {
+  font-weight: 400;
+  margin-bottom: 2mm;
+}
+
+.content {
+  display: block;
+  width: initial;
+  margin-top: 0;
+}
+
+.page {
+  display: block;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 3mm;
+}
+
+.description {
+  max-height: initial;
+  overflow-y: initial;
+  overflow-x: initial;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.wrapper {
+  padding: var(--page-margin);
+  overflow-x: initial;
+  overflow-y: initial;
+}
+
+.print-head {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  /* Spacing of page are set here instead of @page rule with 'margin', due to the background stretching to the edges of the page */
+  padding: var(--page-margin);
+}
+
+.print-head h1 {
+  margin-bottom: 0;
+}
+
+.tagline {
+  font-size: 20pt;
+  font-weight: 200;
+  margin-bottom: 4mm;
+}
+
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagebreak {
+  padding-top: var(--page-margin);
+  page-break-before: always;
+}

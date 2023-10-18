@@ -10,6 +10,7 @@
     <title>Front End Developer | Krisztián Hübner</title>
     <link rel="stylesheet" type="text/css" href="/styles/main.css" />
     <link rel="stylesheet" type="text/css" href="/styles/hamburger.css" />
+    <link rel="stylesheet" media="print" href="/styles/print.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <meta property="og:title" content="Front End Developer | Krisztián Hübner" />
     <meta property="og:type" content="profile" />
@@ -32,10 +33,34 @@
     </script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="/img/favicon.png" type="image/png" />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/7189bfce67.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div class="print-head print-only">
+      <header>
+        <h1>Krisztián Hübner</h1>
+        <p class="tagline">Front-end Developer</p>
+      </header>
+      <ul class="contact-details">
+        <li><i class="fa-solid fa-location-dot"></i> <strong>Address</strong> Gap, 05000 France</li>
+        <li><i class="fa-solid fa-phone"></i> <strong>Phone</strong> +36 30 528 2630</li>
+        <li><i class="fa-solid fa-envelope"></i> <strong>Email</strong> krisztianhubner@gmail.com</li>
+        <li>
+          <i class="fa-solid fa-globe"></i> <strong>Website</strong>
+          <a href="https://stchristian.github.io/">stchristian.github.io</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-linkedin"></i> <strong>Linkedin</strong>
+          <a href="https://www.linkedin.com/in/christianhubner/">christianhubner</a>
+        </li>
+      </ul>
+    </div>
     <div class="navigation-bar">
       <div class="menu cross menu--1">
         <label>
@@ -81,9 +106,8 @@
             <rect x="1617" y="825" width="10" height="198" fill="#E8D5B5" />
             <rect x="1664" y="382" width="20" height="641" fill="#E8D5B5" />
           </svg>
-
           <div class="page page-active" data-page-url="/">
-            <h1>Hello!</h1>
+            <h1 class="print-hidden">Hello!</h1>
             <div class="description">
               <p>
                 My name is Krisztián Hübner, I’m a hungarian front-end developer. I believe that front-end development
@@ -93,31 +117,30 @@
               </p>
             </div>
           </div>
-          <div class="page" data-page-url="/career/one">
+          <div class="print-only">
+            <h2><i class="fa-solid fa-briefcase"></i> Work History</h2>
+          </div>
+          <div class="page" data-page-url="/career/three">
             <header>
-              <h1>A long time ago...</h1>
+              <h1 class="print-hidden">Wolfs of Wall Street</h1>
               <div class="time">
-                <time datetime="2019-06">June 2019</time> - <time datetime="2020-09">September 2020</time>
+                <time datetime="2022-05">May 2022</time> - <time datetime="2022-12">December 2022</time>
               </div>
             </header>
             <div class="description">
               <p>
-                In my role as Full Stack Developer, I contributed to a platform enabling digital contracts, focusing on
-                features for users to create and sign documents. Utilizing Vue.js and Vuex for the front end and Express
-                with knex and MySQL for the backend, I also gained insights into payment gateway operations.
-                Transitioning to a new project, I became part of a team developing a Jira-integrated application for
-                running retro ceremonies. Responsibilities included understanding add-on development documentation,
-                establishing the initial architecture, and implementing real-time functionality using server-sent events
-                (SSE) and Redis store. We were following the practices of Scrum methodology on a daily basis. This
-                experience enhanced collaborative skills within a dynamic team, and reinforced the importance of a
-                proactive approach in the workplace.
+                At a large finance company , I contributed to a small team working on a greenfield project that allowed
+                clients to build custom indexes using React and the Fluent component library, connected to a Java-based
+                backend. My responsibilities included implementing features, bug fixing, writing tests with Jest, and
+                refactoring. This experience provided valuable insights into large-scale company operations, and on the
+                technical side, expanded my knowledge in testing methodologies.
               </p>
             </div>
-            <a class="btn btn-primary" href="/career/two" data-href="/career/two">Next</a>
+            <a class="btn btn-secondary" href="/career/two" data-href="/career/two">Previous</a>
           </div>
           <div class="page" data-page-url="/career/two">
             <header>
-              <h1>How would you <i>React</i>?</h1>
+              <h1 class="print-hidden">How would you <i>React</i>?</h1>
               <div class="time">
                 <time datetime="2020-11">September 2020</time> - <time datetime="2022-05">May 2022</time>
               </div>
@@ -137,50 +160,51 @@
             <a class="btn btn-secondary" href="/career/one" data-href="/career/one">Previous</a>
             <a class="btn btn-primary" href="/career/three" data-href="/career/three">Next</a>
           </div>
-          <div class="page" data-page-url="/career/three">
+          <div class="page" data-page-url="/career/one">
             <header>
-              <h1>Wolfs of Wall Street</h1>
+              <h1 class="print-hidden">A long time ago...</h1>
               <div class="time">
-                <time datetime="2022-05">May 2022</time> - <time datetime="2022-12">December 2022</time>
+                <time datetime="2019-06">June 2019</time> - <time datetime="2020-09">September 2020</time>
               </div>
             </header>
             <div class="description">
               <p>
-                At a large finance company , I contributed to a small team working on a greenfield project that allowed
-                clients to build custom indexes using React and the Fluent component library, connected to a Java-based
-                backend. My responsibilities included implementing features, bug fixing, writing tests with Jest, and
-                refactoring. This experience provided valuable insights into large-scale company operations, and on the
-                technical side, expanded my knowledge in testing methodologies.
+                In my role as Full Stack Developer, I contributed to a platform enabling digital contracts, focusing on
+                features for users to create and sign documents. Utilizing Vue.js and Vuex for the front end and Express
+                with knex and MySQL for the backend, I also gained insights into payment gateway operations.
+                Transitioning to a new project, I became part of a team developing a Jira-integrated application for
+                running retro ceremonies. Responsibilities included understanding add-on development documentation,
+                establishing the initial architecture, and implementing real-time functionality using server-sent events
+                (SSE) and Redis store. We were following the practices of Scrum methodology on a daily basis. This
+                experience enhanced collaborative skills within a dynamic team, and reinforced the importance of a
+                proactive approach in the workplace.
               </p>
             </div>
-            <a class="btn btn-secondary" href="/career/two" data-href="/career/two">Previous</a>
+            <a class="btn btn-primary" href="/career/two" data-href="/career/two">Next</a>
           </div>
-          <div class="page" data-page-url="/hobbies">
-            <h1>Hobbits and habits</h1>
+
+          <div class="page pagebreak print-only" data-page-url="/education">
+            <header>
+              <h2 class="print-only"><i class="fa-solid fa-school"></i> Education</h2>
+              <div class="time">
+                <time datetime="2016-09">September 2016</time> - <time datetime="2021-01">January 2021</time>
+              </div>
+            </header>
             <div class="description">
               <p>
-                Since my childhood I've been a fan of playing guitar. I have four guitars for different genres of music.
-                It's an activity that helps me relax and be creative.
-              </p>
-              <p>
-                I enjoy sports as well. Some days I play ping pong, other days I just go running or biking. However, my
-                newest passion is climbing.
-              </p>
-            </div>
-          </div>
-          <div class="page" data-page-url="/languages">
-            <h1>Excuse me?!</h1>
-            <div class="description">
-              <p>
-                I have a B2 proficiency level in both German and English. I am particularly confident in the latter, as
-                I use English nearly every day. I learned French when I did a volunteering in France and I constantly
-                devote time and effort to improving my speaking and writing skills.
+                I acquired my bachelor's degree in Computer Science Engineering with a focus on software development at
+                the Budapest University of Technology and Economics. During my studies, I serverd as a demonstrator
+                teaching a small group of students for a course called Databases. The course was an introductory course
+                about the theory of databases. This introductory course delved into the theory of databases, covering
+                topics such as relational databases, ACID properties, physical implementations, query optimizations,
+                normalization, and row and column calculus.
               </p>
             </div>
           </div>
           <div class="page" data-page-url="/volunteering">
+            <h2 class="print-only"><i class="fa-solid fa-handshake-angle"></i> Volunteering</h2>
             <header>
-              <h1>La Solidarité</h1>
+              <h1 class="print-hidden">La Solidarité</h1>
               <div class="time">
                 <time datetime="2023-02">February 2023 </time>- <time datetime="2023-08">August 2023</time>
               </div>
@@ -195,6 +219,32 @@
                 preserving the historical heritage of the village. During the almost seven months I spent as a
                 volunteer, I gained invaluable insights into the importance of a collective life.
               </p>
+            </div>
+            <div class="page" data-page-url="/languages">
+              <h1 class="print-hidden">Excuse me?!</h1>
+              <h2 class="print-only"><i class="fa-solid fa-earth-europe"></i> Languages</h2>
+              <div class="description">
+                <p>
+                  I have an official B2 proficiency level in both German and English. Since obtaining my certificate, my
+                  practical proficiency in English has continually progressed, reaching a current level between C1 and
+                  C2. I learned French when during my time spent as a volunteer in France and I constantly devote time
+                  and effort to improving my speaking and writing skills.
+                </p>
+              </div>
+            </div>
+            <div class="page" data-page-url="/hobbies">
+              <h1 class="print-hidden">Hobbits and habits</h1>
+              <h2 class="print-only"><i class="fa-solid fa-guitar"></i> Hobbies</h2>
+              <div class="description">
+                <p>
+                  Since my childhood I've been a fan of playing guitar. I have four guitars for different genres of
+                  music. It's an activity that helps me relax and be creative.
+                </p>
+                <p>
+                  I enjoy sports as well. Some days I play ping pong, other days I just go running or biking. However,
+                  my newest passion is climbing.
+                </p>
+              </div>
             </div>
           </div>
         </main>
