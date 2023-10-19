@@ -105,9 +105,9 @@
           <rect x="1617" y="825" width="10" height="198" fill="#E8D5B5" />
           <rect x="1664" y="382" width="20" height="641" fill="#E8D5B5" />
         </svg>
-        <div class="page page-active" data-page-url="/">
+        <div class="page page--active" data-page-url="/">
           <h1 class="print-hidden">Hello!</h1>
-          <div class="description">
+          <div class="page__description">
             <p>
               My name is Krisztián Hübner, I’m a hungarian front-end developer. I believe that front-end development is
               not just about writing code; it's a form of digital craftsmanship that shares similarities with physical
@@ -122,11 +122,11 @@
         <div class="page" data-page-url="/career/three">
           <header>
             <h1 class="print-hidden">Wolfs of Wall Street</h1>
-            <div class="time">
+            <div class="page__tagline">
               <time datetime="2022-05">May 2022</time> - <time datetime="2022-12">December 2022</time>
             </div>
           </header>
-          <div class="description">
+          <div class="page__description">
             <p>
               At a large finance company , I contributed to a small team working on a greenfield project that allowed
               clients to build custom indexes using React and the Fluent component library, connected to a Java-based
@@ -135,16 +135,16 @@
               technical side, expanded my knowledge in testing methodologies.
             </p>
           </div>
-          <a class="btn btn-secondary" href="/career/two" data-href="/career/two">Previous</a>
+          <a class="btn btn--secondary" href="/career/two" data-href="/career/two">Previous</a>
         </div>
         <div class="page" data-page-url="/career/two">
           <header>
             <h1 class="print-hidden">How would you <i>React</i>?</h1>
-            <div class="time">
+            <div class="page__tagline">
               <time datetime="2020-11">September 2020</time> - <time datetime="2022-05">May 2022</time>
             </div>
           </header>
-          <div class="description">
+          <div class="page__description">
             <p>
               In a team working on an e-commerce wine and spirit trading platform for a British client, our focus was
               migrating their legacy system to Node.js with a GraphQL API. While maintaining and adding features to the
@@ -156,17 +156,17 @@
               leadership.
             </p>
           </div>
-          <a class="btn btn-secondary" href="/career/one" data-href="/career/one">Previous</a>
-          <a class="btn btn-primary" href="/career/three" data-href="/career/three">Next</a>
+          <a class="btn btn--secondary" href="/career/one" data-href="/career/one">Previous</a>
+          <a class="btn btn--primary" href="/career/three" data-href="/career/three">Next</a>
         </div>
         <div class="page" data-page-url="/career/one">
           <header>
             <h1 class="print-hidden">A long time ago...</h1>
-            <div class="time">
+            <div class="page__tagline">
               <time datetime="2019-06">June 2019</time> - <time datetime="2020-09">September 2020</time>
             </div>
           </header>
-          <div class="description">
+          <div class="page__description">
             <p>
               In my role as Full Stack Developer, I contributed to a platform enabling digital contracts, focusing on
               features for users to create and sign documents. Utilizing Vue.js and Vuex for the front end and Express
@@ -179,17 +179,17 @@
               workplace.
             </p>
           </div>
-          <a class="btn btn-primary" href="/career/two" data-href="/career/two">Next</a>
+          <a class="btn btn--primary" href="/career/two" data-href="/career/two">Next</a>
         </div>
 
         <div class="page pagebreak print-only" data-page-url="/education">
           <header>
             <h2 class="print-only"><i class="fa-solid fa-school"></i> Education</h2>
-            <div class="time">
+            <div class="page__tagline">
               <time datetime="2016-09">September 2016</time> - <time datetime="2021-01">January 2021</time>
             </div>
           </header>
-          <div class="description">
+          <div class="page__description">
             <p>
               I acquired my bachelor's degree in Computer Science Engineering with a focus on software development at
               the Budapest University of Technology and Economics. During my studies, I serverd as a demonstrator
@@ -204,11 +204,11 @@
           <h2 class="print-only"><i class="fa-solid fa-handshake-angle"></i> Volunteering</h2>
           <header>
             <h1 class="print-hidden">La Solidarité</h1>
-            <div class="time">
+            <div class="page__tagline">
               <time datetime="2023-02">February 2023 </time>- <time datetime="2023-08">August 2023</time>
             </div>
           </header>
-          <div class="description">
+          <div class="page__description">
             <p>
               I wanted to try something completely different in my life, unrelated to my profession, aiming to discover
               an alternative way of life. This led me to volunteer in France, in a charming village called Vaunières,
@@ -223,7 +223,7 @@
         <div class="page" data-page-url="/languages">
           <h1 class="print-hidden">Excuse me?!</h1>
           <h2 class="print-only"><i class="fa-solid fa-earth-europe"></i> Languages</h2>
-          <div class="description">
+          <div class="page__description">
             <p>
               I have an official B2 proficiency level in both German and English. Since obtaining my certificate, my
               practical proficiency in English has continually progressed, reaching a current level between C1 and C2. I
@@ -235,7 +235,7 @@
         <div class="page" data-page-url="/hobbies">
           <h1 class="print-hidden">Hobbits and habits</h1>
           <h2 class="print-only"><i class="fa-solid fa-guitar"></i> Hobbies</h2>
-          <div class="description">
+          <div class="page__description">
             <p>
               Since my childhood I've been a fan of playing guitar. I have four guitars for different genres of music.
               It's an activity that helps me relax and be creative.
@@ -255,34 +255,34 @@
 
         <ul class="nav-list">
           <li>
-            <a class="nav-list-item active-link" href="/" data-href="/" data-exact="true">
+            <a class="nav-list__item active-link" href="/" data-href="/" data-exact="true">
               <i class="fa-solid fa-pen"></i><span>About me</span>
             </a>
           </li>
           <li>
-            <a class="nav-list-item" href="/career" data-href="/career" data-redirect="/career/one">
+            <a class="nav-list__item" href="/career" data-href="/career" data-redirect="/career/one">
               <i class="fa-solid fa-briefcase"></i><span>Career</span>
             </a>
             <ul class="subnav-list">
-              <li class="subnav-item">
+              <li class="subnav-list__item">
                 <a href="/beginnings" data-href="/career/one">As a full stack developer</a>
               </li>
-              <li class="subnav-item"><a href="/career/two" data-href="/career/two">Deep dive into react</a></li>
-              <li class="subnav-item"><a href="/career/three" data-href="/career/three">Still in love</a></li>
+              <li class="subnav-list__item"><a href="/career/two" data-href="/career/two">Deep dive into react</a></li>
+              <li class="subnav-list__item"><a href="/career/three" data-href="/career/three">Still in love</a></li>
             </ul>
           </li>
           <li>
-            <a class="nav-list-item" href="/hobbies" data-href="/hobbies">
+            <a class="nav-list__item" href="/hobbies" data-href="/hobbies">
               <i class="fa-solid fa-guitar"></i><span>Hobbies</span>
             </a>
           </li>
           <li>
-            <a class="nav-list-item" href="/volunteering" data-href="/volunteering">
+            <a class="nav-list__item" href="/volunteering" data-href="/volunteering">
               <i class="fa-solid fa-handshake-angle"></i><span>Volunteering</span>
             </a>
           </li>
           <li>
-            <a class="nav-list-item" href="/languages" data-href="/languages">
+            <a class="nav-list__item" href="/languages" data-href="/languages">
               <i class="fa-solid fa-globe"></i><span>Languages</span>
             </a>
           </li>
@@ -346,8 +346,8 @@
         window.history.pushState({}, "", newUrl);
         pages.forEach((page) =>
           page.dataset.pageUrl === activePageUrl
-            ? page.classList.add("page-active")
-            : page.classList.remove("page-active")
+            ? page.classList.add("page--active")
+            : page.classList.remove("page--active")
         );
         links.forEach((link) => {
           const exact = link.dataset.exact;
@@ -355,7 +355,7 @@
           addActiveClassToLink ? link.classList.add("active-link") : link.classList.remove("active-link");
         });
         pageAnimation = anime({
-          targets: ".page-active",
+          targets: ".page--active",
           opacity: 0,
           translateX: -32,
           duration: 1000,

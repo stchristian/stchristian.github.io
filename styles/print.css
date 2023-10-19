@@ -48,7 +48,7 @@ h2 {
   display: block;
 }
 
-.time {
+.page__tagline {
   font-weight: 400;
   margin-bottom: 2mm;
 }
@@ -57,6 +57,7 @@ h2 {
   display: block;
   width: initial;
   margin-top: 0;
+  padding: var(--page-margin);
 }
 
 .page {
@@ -67,7 +68,7 @@ h2 {
   margin-bottom: 3mm;
 }
 
-.description {
+.page__description {
   max-height: initial;
   overflow-y: initial;
   overflow-x: initial;
@@ -75,16 +76,9 @@ h2 {
   margin-bottom: 0;
 }
 
-.wrapper {
-  padding: var(--page-margin);
-  overflow-x: initial;
-  overflow-y: initial;
-}
-
 .print-head {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  /* Spacing of page are set here instead of @page rule with 'margin', due to the background stretching to the edges of the page */
   padding: var(--page-margin);
 }
 
