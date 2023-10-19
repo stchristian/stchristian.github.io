@@ -5,10 +5,8 @@
 .menu label {
   display: block;
   cursor: pointer;
-  width: 50vw;
-  height: 50vw;
-  max-width: 24px;
-  max-height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .menu svg {
@@ -28,29 +26,29 @@
   transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.cross input:checked + svg .line--1,
-.cross input:checked + svg .line--3 {
-  --length: 22.627416998;
-}
-
-.cross input:checked + svg .line--2 {
-  --length: 0;
-}
-
-.menu--1 .line--1,
-.menu--1 .line--3 {
+.menu .line--1,
+.menu .line--3 {
   --total-length: 126.64183044433594;
 }
 
-.menu--1 .line--2 {
+.menu .line--2 {
   --total-length: 70;
 }
 
-.menu--1 input:checked + svg .line--1,
-.menu--1 input:checked + svg .line--3 {
+.menu input:checked + svg .line--1,
+.menu input:checked + svg .line--3 {
   --offset: -94.1149185097;
 }
 
-.menu--1 input:checked + svg .line--2 {
+.menu input:checked + svg .line--2 {
   --offset: -50;
+}
+
+.menu input:checked + svg .line--1,
+.menu input:checked + svg .line--3 {
+  --length: 22.627416998;
+}
+
+.menu input:checked + svg .line--2 {
+  --length: 0;
 }
