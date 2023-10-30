@@ -5,6 +5,11 @@
   display: flex;
 }
 
+.minitext {
+  font-size: 8px;
+  align-self: flex-start;
+}
+
 .table__tab {
   padding: 4px 8px;
   background-color: transparent;
@@ -36,21 +41,18 @@
   padding: 16px 8px;
   border-style: solid;
   border-color: var(--secondary-color);
-  height: 240px;
   overflow: hidden;
   font-size: 14px;
 }
 
 .table__body__list {
   display: none;
-  flex-direction: column;
-  flex-wrap: wrap;
   gap: 8px;
-  max-height: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
 }
 
 .table__body__list--active {
-  display: flex;
+  display: grid;
 }
 
 .notation__header {
@@ -118,6 +120,7 @@ tech-badge:last-of-type .badge {
   display: inline-flex;
   gap: 8px;
   align-items: center;
+  white-space: nowrap;
 }
 
 .tech-item__badges {
@@ -125,18 +128,23 @@ tech-badge:last-of-type .badge {
 }
 
 @media screen and (max-width: 1400px) {
-  .table__body {
+  /* .table__body {
     height: 500px;
-  }
+  } */
 }
 
 @media screen and (max-width: 850px) {
   .table__body__list {
+    flex-wrap: wrap;
     flex-direction: row;
+  }
+  .table__body__list--active {
+    display: flex;
   }
   .table__body {
     border: none;
     height: initial;
+    padding: 16px 0;
   }
   .table__tab-bar {
     border-bottom: 2px solid var(--secondary-color);
