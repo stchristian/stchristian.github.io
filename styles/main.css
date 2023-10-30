@@ -2,13 +2,22 @@
   --primary-color: #001480;
   --secondary-color: #e8d5b5;
   --inactive-color: #888888;
-  --mobile-breakpoint: 800px;
 }
 
 html {
   height: 100%;
   margin: 0;
   font-family: "JetBrains Mono", monospace;
+}
+
+button {
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 .print-only {
@@ -20,11 +29,11 @@ html {
 }
 
 /* Scrollbar style */
-html::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 2px;
 }
 
-html::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: var(--secondary-color);
   border-radius: 10px;
 }
@@ -43,7 +52,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: start;
-  margin: 164px auto 0 auto;
+  margin: 128px auto 0 auto;
   gap: 64px;
 }
 
@@ -99,9 +108,9 @@ p {
 
 .me {
   position: absolute;
-  top: -150px;
+  top: -100px;
   left: 32px;
-  height: 150px;
+  height: 100px;
 }
 
 /* Button styles */
@@ -238,7 +247,6 @@ address {
 }
 
 /* Mobile style */
-
 @media screen and (max-width: 850px) {
   h1 {
     font-size: 32px;

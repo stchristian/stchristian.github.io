@@ -10,6 +10,7 @@
     <title>Front End Developer | Krisztián Hübner</title>
     <link rel="stylesheet" type="text/css" href="/styles/main.css" />
     <link rel="stylesheet" type="text/css" href="/styles/hamburger.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/technologies.css" />
     <link rel="stylesheet" media="print" href="/styles/print.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <meta property="og:title" content="Front End Developer | Krisztián Hübner" />
@@ -42,6 +43,7 @@
     <script src="https://kit.fontawesome.com/7189bfce67.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!-- #region social-links -->
     <div class="print-head print-only">
       <header>
         <h1>Krisztián Hübner</h1>
@@ -61,6 +63,9 @@
         </li>
       </ul>
     </div>
+    <!-- #endregion  -->
+
+    <!-- #region navbar with hamburger menu -->
     <div class="navigation-bar">
       <div class="menu">
         <label>
@@ -73,10 +78,12 @@
         </label>
       </div>
     </div>
+    <!-- #endregion -->
 
     <div class="content">
       <!-- PAGE  -->
       <main>
+        <!-- #region Animation svg -->
         <svg
           class="main-animation"
           width="1711"
@@ -105,7 +112,10 @@
           <rect x="1617" y="825" width="10" height="198" fill="#E8D5B5" />
           <rect x="1664" y="382" width="20" height="641" fill="#E8D5B5" />
         </svg>
-        <div class="page page--active" data-page-url="/">
+        <!-- #endregion -->
+
+        <!-- #region pages -->
+        <div class="page page--active" data-pathname="/">
           <h1 class="print-hidden">Hello!</h1>
           <div class="page__description">
             <p>
@@ -119,7 +129,7 @@
         <div class="print-only">
           <h2><i class="fa-solid fa-briefcase"></i> Work History</h2>
         </div>
-        <div class="page" data-page-url="/career/three">
+        <div class="page" data-pathname="/career/three">
           <header>
             <h1 class="print-hidden">Wolfs of Wall Street</h1>
             <div class="page__tagline">
@@ -137,7 +147,7 @@
           </div>
           <a class="btn btn--secondary" href="/career/two" data-href="/career/two">Previous</a>
         </div>
-        <div class="page" data-page-url="/career/two">
+        <div class="page" data-pathname="/career/two">
           <header>
             <h1 class="print-hidden">How would you <i>React</i>?</h1>
             <div class="page__tagline">
@@ -159,7 +169,7 @@
           <a class="btn btn--secondary" href="/career/one" data-href="/career/one">Previous</a>
           <a class="btn btn--primary" href="/career/three" data-href="/career/three">Next</a>
         </div>
-        <div class="page" data-page-url="/career/one">
+        <div class="page" data-pathname="/career/one">
           <header>
             <h1 class="print-hidden">A long time ago...</h1>
             <div class="page__tagline">
@@ -182,7 +192,7 @@
           <a class="btn btn--primary" href="/career/two" data-href="/career/two">Next</a>
         </div>
 
-        <div class="page pagebreak print-only" data-page-url="/education">
+        <div class="page pagebreak print-only" data-pathname="/education">
           <header>
             <h2 class="print-only"><i class="fa-solid fa-school"></i> Education</h2>
             <div class="page__tagline">
@@ -200,7 +210,7 @@
             </p>
           </div>
         </div>
-        <div class="page" data-page-url="/volunteering">
+        <div class="page" data-pathname="/volunteering">
           <h2 class="print-only"><i class="fa-solid fa-handshake-angle"></i> Volunteering</h2>
           <header>
             <h1 class="print-hidden">La Solidarité</h1>
@@ -220,7 +230,7 @@
             </p>
           </div>
         </div>
-        <div class="page" data-page-url="/languages">
+        <div class="page" data-pathname="/languages">
           <h1 class="print-hidden">Excuse me?!</h1>
           <h2 class="print-only"><i class="fa-solid fa-earth-europe"></i> Languages</h2>
           <div class="page__description">
@@ -232,7 +242,7 @@
             </p>
           </div>
         </div>
-        <div class="page" data-page-url="/hobbies">
+        <div class="page" data-pathname="/hobbies">
           <h1 class="print-hidden">Hobbits and habits</h1>
           <h2 class="print-only"><i class="fa-solid fa-guitar"></i> Hobbies</h2>
           <div class="page__description">
@@ -246,49 +256,362 @@
             </p>
           </div>
         </div>
-      </main>
-      <!-- PAGE END  -->
+        <!-- #endregion  -->
 
-      <!-- NAVIGATION -->
+        <div class="page" data-pathname="/technologies">
+          <h1>Technologies</h1>
+          <div class="page__description">
+            <p>A list of the technologies I used over the years.</p>
+          </div>
+          <div class="table">
+            <div class="table__tab-bar">
+              <button id="frontend" class="table__tab table__tab--active">front-end</button>
+              <button id="backend" class="table__tab">back-end</button>
+              <button id="other" class="table__tab">other</button>
+            </div>
+            <div class="table__body">
+              <!-- #region frontend tech list -->
+              <div data-button-id="frontend" class="table__body__list table__body__list--active">
+                <div class="tech-item">
+                  React
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Redux (Toolkit, Saga)
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  React Testing Library
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  React Query
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  MUI React
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Lodash
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Fluent
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  NextJS
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Vue.js
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="out-of-date"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Nuxt.js
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="out-of-date"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Angular
+                  <div class="tech-item__badges">
+                    <tech-badge type="out-of-date"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Tailwind CSS
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Styled Components
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Storybook
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  HTML
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  CSS
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Sass
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  React Native
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Bootstrap
+                  <div class="tech-item__badges">
+                    <tech-badge type="confident"></tech-badge>
+                    <tech-badge type="out-of-date"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Webpack
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Babel
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+              </div>
+              <!-- #endregion-->
+
+              <div data-button-id="backend" class="table__body__list">
+                <div class="tech-item">
+                  Node.js
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  GraphQL
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Express
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  TypeORM
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="out-of-date"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  MongoDB
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  AWS (EC2, S3, Lambda)
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Azure (App Service, Pipelines)
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Firebase (Store, Auth, Cloud Functions, Messaging)
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+              </div>
+              <!-- <div data-button-id="design" class="table__body__list"></div> -->
+              <div data-button-id="other" class="table__body__list">
+                <div class="tech-item">
+                  Figma (used to design this site)
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Insomnia
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  VSCode
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Gitlab
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="out-of-date"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Github Actions
+                  <div class="tech-item__badges"></div>
+                </div>
+                <div class="tech-item">
+                  Docker
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  VSCode
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  TypeScript
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="confident"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Stripe
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Opayo
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="out-of-date"></tech-badge>
+                  </div>
+                </div>
+                <div class="tech-item">
+                  Shopify
+                  <div class="tech-item__badges">
+                    <tech-badge type="work"></tech-badge>
+                    <tech-badge type="out-of-date"></tech-badge>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notation">
+            <h4 class="notation__header">
+              <button id="notationButton"><i class="fa-solid fa-angle-right"></i> Notation</button>
+            </h4>
+            <ul class="notation__body">
+              <li class="notation__item"><tech-badge type="work"></tech-badge>Work experience</li>
+              <li class="notation__item"><tech-badge type="confident"></tech-badge>Great confidence</li>
+              <li class="notation__item">
+                <tech-badge type="out-of-date"></tech-badge>Not up to date as not having been used recently
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <template id="tech-badge">
+        <span class="badge"><i class="fa-solid"></i></span>
+      </template>
+      <!-- #region navigation -->
       <nav>
         <img class="me" src="/img/me.svg" alt="" />
 
         <ul class="nav-list">
           <li>
-            <a class="nav-list__item active-link" href="/" data-href="/" data-exact="true">
+            <a class="nav-list__item active-link" href="/" data-exact="true">
               <i class="fa-solid fa-pen"></i><span>About me</span>
             </a>
           </li>
           <li>
-            <a class="nav-list__item" href="/career" data-href="/career" data-redirect="/career/one">
+            <a class="nav-list__item" href="/career" data-redirect="/career/one">
               <i class="fa-solid fa-briefcase"></i><span>Career</span>
             </a>
             <ul class="subnav-list">
               <li class="subnav-list__item">
-                <a href="/beginnings" data-href="/career/one">As a full stack developer</a>
+                <a href="/career/one">As a full stack developer</a>
               </li>
-              <li class="subnav-list__item"><a href="/career/two" data-href="/career/two">Deep dive into react</a></li>
-              <li class="subnav-list__item"><a href="/career/three" data-href="/career/three">Still in love</a></li>
+              <li class="subnav-list__item"><a href="/career/two">Deep dive into react</a></li>
+              <li class="subnav-list__item"><a href="/career/three">Still in love</a></li>
             </ul>
           </li>
           <li>
-            <a class="nav-list__item" href="/hobbies" data-href="/hobbies">
-              <i class="fa-solid fa-guitar"></i><span>Hobbies</span>
-            </a>
+            <a class="nav-list__item" href="/hobbies"> <i class="fa-solid fa-guitar"></i><span>Hobbies</span> </a>
           </li>
           <li>
-            <a class="nav-list__item" href="/volunteering" data-href="/volunteering">
+            <a class="nav-list__item" href="/volunteering">
               <i class="fa-solid fa-handshake-angle"></i><span>Volunteering</span>
             </a>
           </li>
           <li>
-            <a class="nav-list__item" href="/languages" data-href="/languages">
-              <i class="fa-solid fa-globe"></i><span>Languages</span>
+            <a class="nav-list__item" href="/technologies">
+              <i class="fa-solid fa-laptop-code"></i><span>Technologies</span>
             </a>
+          </li>
+          <li>
+            <a class="nav-list__item" href="/languages"> <i class="fa-solid fa-globe"></i><span>Languages</span> </a>
           </li>
         </ul>
       </nav>
-      <!-- NAVIGATION  END-->
+      <!-- #endregion -->
     </div>
     <!-- SOCIAL LINKS  -->
     <address class="social-links">
@@ -310,82 +633,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script>
-      let toggleButton;
-      let nav;
-      let links;
-      let pages = [];
-      let activePageUrl;
-      let pageAnimation;
-
-      document.addEventListener("DOMContentLoaded", (event) => {
-        toggleButton = document.getElementById("hamburgerMenu");
-        nav = document.querySelector("nav");
-        pages = Array.from(document.querySelectorAll(".page"));
-
-        links = document.querySelectorAll("a");
-        links.forEach((link) => link.addEventListener("click", linkClicked));
-
-        toggleButton.addEventListener("click", openOrCloseMenu);
-        loadPage(window.location.pathname ?? "/");
-        loadAnimations();
-      });
-
-      function openOrCloseMenu() {
-        if (toggleButton.checked) {
-          nav.classList.add("open");
-        } else {
-          nav.classList.remove("open");
-        }
-      }
-
-      // Handle navigation
-      function loadPage(newUrl) {
-        if (activePageUrl == newUrl) return;
-        activePageUrl = newUrl;
-        window.history.pushState({}, "", newUrl);
-        pages.forEach((page) =>
-          page.dataset.pageUrl === activePageUrl
-            ? page.classList.add("page--active")
-            : page.classList.remove("page--active")
-        );
-        links.forEach((link) => {
-          const exact = link.dataset.exact;
-          const addActiveClassToLink = exact ? link.dataset.href === newUrl : newUrl.startsWith(link.dataset.href);
-          addActiveClassToLink ? link.classList.add("active-link") : link.classList.remove("active-link");
-        });
-        pageAnimation = anime({
-          targets: ".page--active",
-          opacity: 0,
-          translateX: -32,
-          duration: 1000,
-          direction: "reverse",
-          easing: "easeInCubic",
-        });
-      }
-
-      function linkClicked(event) {
-        if (typeof event.currentTarget.dataset.href == "undefined") return;
-        if (toggleButton.checked) {
-          toggleButton.checked = false;
-          openOrCloseMenu();
-        }
-        event.preventDefault();
-        const { redirect, href } = event.currentTarget.dataset;
-        loadPage(redirect ?? href);
-      }
-
-      function loadAnimations() {
-        anime({
-          targets: "rect",
-          translateY: [0, 100, 0],
-          duration: 2000,
-          delay: anime.stagger(100),
-          autoplay: true,
-          direction: "alternate",
-          loop: true,
-        });
-      }
-    </script>
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/components.js"></script>
   </body>
 </html>
