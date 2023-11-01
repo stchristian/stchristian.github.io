@@ -43,25 +43,38 @@
     <script src="https://kit.fontawesome.com/7189bfce67.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- #region social-links -->
+    <!-- #region print head -->
     <div class="print-head print-only">
-      <header>
-        <h1>Krisztián Hübner</h1>
-        <p class="tagline">Front-end Developer</p>
-      </header>
-      <ul class="contact-details">
-        <li><i class="fa-solid fa-location-dot"></i> <strong>Address</strong> Gap, 05000 France</li>
-        <li><i class="fa-solid fa-phone"></i> <strong>Phone</strong> +36 30 528 2630</li>
-        <li><i class="fa-solid fa-envelope"></i> <strong>Email</strong> krisztianhubner@gmail.com</li>
-        <li>
-          <i class="fa-solid fa-globe"></i> <strong>Website</strong>
-          <a href="https://stchristian.github.io/">stchristian.github.io</a>
-        </li>
-        <li>
-          <i class="fa-brands fa-linkedin"></i> <strong>Linkedin</strong>
-          <a href="https://www.linkedin.com/in/christianhubner/">christianhubner</a>
-        </li>
-      </ul>
+      <div class="print-head__flex">
+        <header>
+          <h1>Krisztián Hübner</h1>
+          <p class="tagline">Front-end Developer</p>
+        </header>
+        <ul class="contact-details">
+          <li>
+            <span><i class="fa-solid fa-location-dot"></i> <strong>Address</strong></span> Gap, 05000 France
+          </li>
+          <li>
+            <span><i class="fa-solid fa-phone"></i> <strong>Phone</strong></span> +36 30 528 2630
+          </li>
+          <li>
+            <span><i class="fa-solid fa-envelope"></i> <strong>Email</strong> </span>krisztianhubner@gmail.com
+          </li>
+          <li>
+            <span><i class="fa-solid fa-globe"></i> <strong>Website</strong></span>
+            <a href="https://stchristian.github.io/">stchristian.github.io</a>
+          </li>
+          <li>
+            <span><i class="fa-brands fa-linkedin"></i> <strong>Linkedin</strong></span>
+            <a href="https://www.linkedin.com/in/christianhubner/">christianhubner</a>
+          </li>
+        </ul>
+      </div>
+      <p>
+        I believe that software development is similar to playing in a sports team. Success requires effective
+        communication, leveraging individual strengths, and a shared goal. This synergy is the key to achieving our
+        objectives in this field. Therefore, becoming a team leader is among my future goals.
+      </p>
     </div>
     <!-- #endregion  -->
 
@@ -115,8 +128,8 @@
         <!-- #endregion -->
 
         <!-- #region pages -->
-        <div class="page page--active" data-pathname="/">
-          <h1 class="print-hidden">Hello!</h1>
+        <div class="page page--active print-hidden" data-pathname="/">
+          <h1>Hello!</h1>
           <div class="page__description">
             <p>
               My name is Krisztián Hübner, I’m a hungarian front-end developer. I believe that front-end development is
@@ -126,17 +139,16 @@
             </p>
           </div>
         </div>
-        <div class="print-only">
-          <h2><i class="fa-solid fa-briefcase"></i> Work History</h2>
-        </div>
-        <div class="page" data-pathname="/career/three">
+        <div class="page print-one-line-header" data-pathname="/career/three">
           <header>
             <h1 class="print-hidden">Wolfs of Wall Street</h1>
+            <h2 class="print-only">MSCI</h2>
             <div class="page__tagline">
-              <time datetime="2022-05">May 2022</time> - <time datetime="2022-12">December 2022</time>
+              <time datetime="2022-05">May 2022</time> -
+              <time datetime="2022-12">December 2022</time>
             </div>
           </header>
-          <div class="page__description">
+          <div class="page__description print-hidden">
             <p>
               At a large finance company , I contributed to a small team working on a greenfield project that allowed
               clients to build custom indexes using React and the Fluent component library, connected to a Java-based
@@ -145,11 +157,20 @@
               technical side, expanded my knowledge in testing methodologies.
             </p>
           </div>
-          <a class="btn btn--secondary" href="/career/two" data-href="/career/two">Previous</a>
+          <ul class="print-only bullet-points">
+            <li>
+              Development of a React application using Fluent library that enables clients to build custom indexes
+            </li>
+            <li>Close collaboration with the Java back-end team to connect back-end parts</li>
+            <li>Improvement of code quality with refactoring, testing</li>
+            <li>Conducting of demos to present new features to stakeholders</li>
+          </ul>
+          <a class="btn btn--secondary" href="/career/two">Previous</a>
         </div>
-        <div class="page" data-pathname="/career/two">
+        <div class="page print-one-line-header" data-pathname="/career/two">
           <header>
             <h1 class="print-hidden">How would you <i>React</i>?</h1>
+            <h2 class="print-only">JayStack</h2>
             <div class="page__tagline">
               <time datetime="2020-11">September 2020</time> - <time datetime="2022-05">May 2022</time>
             </div>
@@ -166,12 +187,36 @@
               leadership.
             </p>
           </div>
-          <a class="btn btn--secondary" href="/career/one" data-href="/career/one">Previous</a>
-          <a class="btn btn--primary" href="/career/three" data-href="/career/three">Next</a>
+          <ul class="print-only bullet-points">
+            <li>
+              Development, maintenance and migration of an e-commerce trading platform together in a team with
+              outsourced and in-house developers
+            </li>
+            <li>
+              Contributing to back end running on a custom in-house GraphQL based ORM similar to Prisma that connects to
+              MongoDB.
+            </li>
+            <li>Taking full responsibility for the maintenance of a front-end application.</li>
+            <li>
+              Taking part in preparation and development work to refactor the website on a new technology stack using
+              Tailwind CSS and MUI components
+            </li>
+            <li>Leveraging Storybook to document custom component library built on styled-components</li>
+            <li>
+              Assessment and estimation of the cost of integrating new payment providers including Stripe according to
+              accounting needs
+            </li>
+            <li>
+              Mentoring new developers, while actively proposing new procedures to follow in the development process
+            </li>
+          </ul>
+          <a class="btn btn--secondary" href="/career/one">Previous</a>
+          <a class="btn btn--primary" href="/career/three">Next</a>
         </div>
-        <div class="page" data-pathname="/career/one">
+        <div class="page print-one-line-header" data-pathname="/career/one">
           <header>
             <h1 class="print-hidden">A long time ago...</h1>
+            <h2 class="print-only">Tappointment</h2>
             <div class="page__tagline">
               <time datetime="2019-06">June 2019</time> - <time datetime="2020-09">September 2020</time>
             </div>
@@ -189,12 +234,24 @@
               workplace.
             </p>
           </div>
-          <a class="btn btn--primary" href="/career/two" data-href="/career/two">Next</a>
+          <ul class="print-only bullet-points">
+            <li>
+              Full-stack development on a platform that facilitates digital contracts between companies, using Vue.js
+              with Nuxt on the front end, and a back end built with Express framework connected to a MySQL database.
+            </li>
+            <li>Following strict Scrum practices to streamline our development process</li>
+            <li>Full refactoring and redesign of an admin site from Angular to Vue.js</li>
+            <li>
+              Taking a crucial role in defining the functional requirements of an in-house product to facilitate
+              retrospectives, and the development using TypeORM and React with Redux Toolkit
+            </li>
+          </ul>
+          <a class="btn btn--primary" href="/career/two">Next</a>
         </div>
 
-        <div class="page pagebreak print-only" data-pathname="/education">
+        <div class="page print-only print-one-line-header" data-pathname="/education">
           <header>
-            <h2 class="print-only"><i class="fa-solid fa-school"></i> Education</h2>
+            <h2 class="print-only"><i class="fa-solid fa-school print-hidden"></i> Education</h2>
             <div class="page__tagline">
               <time datetime="2016-09">September 2016</time> - <time datetime="2021-01">January 2021</time>
             </div>
@@ -209,10 +266,17 @@
               normalization, and row and column calculus.
             </p>
           </div>
+          <ul class="print-only bullet-points">
+            <li>
+              Bachelor's degree in Computer Science Engineering at the Budapest University of Technology and Economics
+              with a focus on software development
+            </li>
+            <li>Demonstrator role for a course about the theory of databases</li>
+          </ul>
         </div>
-        <div class="page" data-pathname="/volunteering">
-          <h2 class="print-only"><i class="fa-solid fa-handshake-angle"></i> Volunteering</h2>
+        <div class="page print-one-line-header" data-pathname="/volunteering">
           <header>
+            <h2 class="print-only"><i class="fa-solid fa-handshake-angle print-hidden"></i> Volunteering</h2>
             <h1 class="print-hidden">La Solidarité</h1>
             <div class="page__tagline">
               <time datetime="2023-02">February 2023 </time>- <time datetime="2023-08">August 2023</time>
@@ -229,10 +293,21 @@
               insights into the importance of a collective life.
             </p>
           </div>
+          <ul class="print-only bullet-points">
+            <li>
+              Discovered an alternative way of life in a mountain village functioning as a host centre, disconnected
+              from the digital world
+            </li>
+            <li>Wide range of tasks from facilitating group activities to everyday chores</li>
+            <li>Lived in a collective life with people from different social backgrounds</li>
+          </ul>
         </div>
-        <div class="page" data-pathname="/languages">
-          <h1 class="print-hidden">Excuse me?!</h1>
-          <h2 class="print-only"><i class="fa-solid fa-earth-europe"></i> Languages</h2>
+        <div class="page print-one-line-header" data-pathname="/languages">
+          <header>
+            <h1 class="print-hidden">Excuse me?!</h1>
+            <h2 class="print-only"><i class="fa-solid fa-earth-europe print-hidden"></i> Languages</h2>
+            <div class="page__tagline print-only">English, Hungarian, German, French</div>
+          </header>
           <div class="page__description">
             <p>
               I have an official B2 proficiency level in both German and English. Since obtaining my certificate, my
@@ -242,9 +317,12 @@
             </p>
           </div>
         </div>
-        <div class="page" data-pathname="/hobbies">
-          <h1 class="print-hidden">Hobbits and habits</h1>
-          <h2 class="print-only"><i class="fa-solid fa-guitar"></i> Hobbies</h2>
+        <div class="page print-one-line-header" data-pathname="/hobbies">
+          <header>
+            <h1 class="print-hidden">Hobbits and habits</h1>
+            <h2 class="print-only"><i class="fa-solid fa-guitar print-hidden"></i> Hobbies</h2>
+            <div class="page__tagline print-only">playing guitar, climbing, hiking</div>
+          </header>
           <div class="page__description">
             <p>
               Since my childhood I've been a fan of playing guitar. I have four guitars for different genres of music.
@@ -258,13 +336,17 @@
         </div>
         <!-- #endregion  -->
 
-        <div class="page" data-pathname="/technologies">
-          <h1>Technologies</h1>
-          <div class="page__description">
+        <!-- #region technologies -->
+        <div class="page print-one-line-header" data-pathname="/technologies">
+          <header>
+            <h1 class="print-hidden">Technologies</h1>
+            <h2 class="print-only">Technologies</h2>
+          </header>
+          <div class="page__description print-hidden">
             <p>A list of the technologies I used over the years.</p>
           </div>
           <div class="table">
-            <div class="table__tab-bar">
+            <div class="table__tab-bar print-hidden">
               <button id="frontend" class="table__tab table__tab--active">front-end</button>
               <button id="backend" class="table__tab">back-end</button>
               <button id="other" class="table__tab">other</button>
@@ -483,7 +565,6 @@
                   </div>
                 </div>
               </div>
-              <!-- <div data-button-id="design" class="table__body__list"></div> -->
               <div data-button-id="other" class="table__body__list">
                 <div class="tech-item">
                   Figma
@@ -561,7 +642,7 @@
             </div>
           </div>
           <div class="notation">
-            <h4 class="notation__header">
+            <h4 class="notation__header print-hidden">
               <button id="notationButton"><i class="fa-solid fa-angle-right"></i> Notation</button>
             </h4>
             <ul class="notation__body">
@@ -577,6 +658,8 @@
       <template id="tech-badge">
         <span class="badge"><i class="fa-solid"></i></span>
       </template>
+      <!-- #endregion -->
+
       <!-- #region navigation -->
       <nav>
         <img class="me" src="/img/me.svg" alt="" />
