@@ -1,0 +1,196 @@
+:root {
+  --page-margin: 5mm;
+}
+
+@page {
+  size: A4 portrait;
+}
+
+body {
+  background-color: transparent;
+  color: var(--primary-color);
+  font-family: "Poppins";
+  line-height: 1.2;
+  font-size: 10pt;
+  font-weight: 300;
+  /* Restrict to one page of a size of A4 document */
+  overflow: hidden;
+  width: 210mm;
+  height: 297mm;
+}
+
+p {
+  line-height: inherit;
+  font-size: inherit;
+}
+
+a {
+  font-size: inherit;
+}
+
+.active-link {
+  border: none;
+}
+
+.fa-solid,
+.fa-brands {
+  vertical-align: baseline;
+}
+
+.navigation-bar,
+.main-animation,
+.btn,
+address,
+svg,
+img,
+nav,
+.print-hidden.print-hidden,
+.page__description {
+  display: none;
+}
+
+.print-keep {
+  display: initial !important;
+}
+
+.print-only {
+  display: initial;
+}
+
+.print-head {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: var(--page-margin);
+}
+
+.print-head > p {
+  margin-bottom: 0;
+}
+
+.print-head__flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.print-head h1 {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+.tagline {
+  font-size: 2em;
+  font-weight: 200;
+  margin-bottom: 4mm;
+}
+
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-details li {
+  display: flex;
+  gap: 8mm;
+  justify-content: space-between;
+}
+
+.print-one-line-header > header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5mm;
+}
+
+.print-one-line-header h2 {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.print-one-line-header .page__tagline {
+  font-size: 1em;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.content {
+  display: block;
+  width: initial;
+  margin-top: 0;
+  padding: var(--page-margin);
+  overflow: hidden;
+}
+
+.page {
+  display: block;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 3mm;
+}
+
+.page__description {
+  max-height: initial;
+  overflow-y: initial;
+  overflow-x: initial;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.bullet-points {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 5mm;
+  display: block;
+}
+
+.bullet-points > li {
+  margin-bottom: 2mm;
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+  max-height: 100%;
+  column-gap: 4mm;
+}
+
+main > * {
+  width: calc(50% - 2mm);
+}
+
+.table__body {
+  border: none;
+  padding: 0;
+}
+
+.table__body__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2mm;
+  margin-bottom: 2mm;
+}
+
+.tech-item {
+  font-size: 0.8em;
+}
+
+.badge--confident {
+  color: var(--primary-color);
+}
+
+.badge {
+  background-color: transparent;
+}
+
+.table {
+  margin-bottom: 2mm;
+}
+
+.notation__body {
+  max-height: initial;
+}

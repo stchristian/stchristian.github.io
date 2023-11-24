@@ -1,3 +1,5 @@
+import "./components";
+
 const baseUrl = window.location.origin;
 
 let toggleButton;
@@ -7,6 +9,7 @@ let pages = [];
 let activePathname;
 let pageAnimation;
 let notationsOpen = false;
+let notation;
 let notationButton;
 
 document.addEventListener("DOMContentLoaded", ready);

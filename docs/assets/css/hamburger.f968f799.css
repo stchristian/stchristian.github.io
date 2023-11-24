@@ -1,0 +1,54 @@
+.menu input {
+  display: none;
+}
+
+.menu label {
+  display: block;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.menu svg {
+  transform: scale(3.5);
+}
+
+.menu path {
+  fill: none;
+  stroke: var(--secondary-color);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  --length: 24;
+  --offset: -38;
+  stroke-dasharray: var(--length) var(--total-length);
+  stroke-dashoffset: var(--offset);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.menu .line--1,
+.menu .line--3 {
+  --total-length: 126.64183044433594;
+}
+
+.menu .line--2 {
+  --total-length: 70;
+}
+
+.menu input:checked + svg .line--1,
+.menu input:checked + svg .line--3 {
+  --offset: -94.1149185097;
+}
+
+.menu input:checked + svg .line--2 {
+  --offset: -50;
+}
+
+.menu input:checked + svg .line--1,
+.menu input:checked + svg .line--3 {
+  --length: 22.627416998;
+}
+
+.menu input:checked + svg .line--2 {
+  --length: 0;
+}
