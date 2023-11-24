@@ -2,5 +2,65 @@
   "fullName": "Krisztián Hübner",
   "tel": "06 49 45 97 41",
   "address": "Gap, 05000 France",
-  "email": "krisztianhubner@gmail.com"
+  "email": "krisztianhubner@gmail.com",
+  "cv": {
+    "introduction": "My name is Krisztián Hübner, I’m a front-end developer. I believe that front-end development is not just about writing code; it's a form of digital craftsmanship that shares similarities with physical work. Just as a skilled artisan sees the tangible results of their labor, I take pride in crafting seamless and visually striking digital experiences.",
+    "experiences": [
+      {
+        "path": "/career/three",
+        "title": "Wolfs of Wall Street",
+        "company": "MSCI",
+        "from": "May 2022",
+        "from_ISO": "2022-05",
+        "to": "December 2022",
+        "to_ISO": "2022-11",
+        "description": "At a large finance company , I contributed to a small team working on a greenfield project that empowered clients to build custom indexes using React and the Fluent component library, connected to a Java-based backend. My responsibilities included implementing features, bug fixing, writing tests with Jest, and refactoring. This experience provided valuable insights into large-scale company operations, and on the technical side, expanded my knowledge in testing methodologies,",
+        "bulletpoints": [
+          "Development of a React application using Fluent library that enables clients to build custom indexes",
+          "Close collaboration with the Java back-end team to connect back-end parts",
+          "Improvement of code quality with refactoring, testing",
+          "Conducting of demos to present new features to stakeholders"
+        ],
+        "back": "/career/two"
+      },
+      {
+        "path": "/career/two",
+        "title": "How would you React?",
+        "company": "Jaystack",
+        "from": "September 2020",
+        "from_ISO": "2020-09",
+        "to": "May 2022",
+        "to_ISO": "2022-05",
+        "description": "In a team working on an e-commerce wine and spirit trading platform for a British client, our focus was migrating their legacy system to Node.js with a GraphQL API. While maintaining and adding features to the frontend applications, my role predominantly involved front-end development using React, Redux, Storybook, Tailwind, styled-components, and MUI. The technology stack also included Shopify, Stripe, and Azure. I took on the responsibility of a client application, gaining a profound understanding of the applications and their architecture. This led to active participation in technical decision-making, task assignment, and explaining tasks to other developers, providing valuable insights into effective collaboration and leadership.",
+        "bulletpoints": [
+          "Development, maintenance and migration of an e-commerce trading platform together in a team with outsourced and in-house developers",
+          "Contributing to back end running on a custom in-house GraphQL based ORM similar to Prisma that connects to MongoDB.",
+          "Taking full responsibility for the maintenance of a front-end application",
+          "Taking part in preparation and development work to refactor the website on a new technology stack using Tailwind CSS and MUI components",
+          "Leveraging Storybook to document custom component library built on styled-components",
+          "Assessment and estimation of the cost of integrating new payment providers including Stripe according to accounting needs",
+          "Mentoring new developers, while actively proposing new procedures to follow in the development process"
+        ],
+        "next": "/career/three",
+        "back": "/career/one"
+      },
+      {
+        "path": "/career/one",
+        "title": "@Startup",
+        "company": "Tappointment",
+        "from": "June 2019",
+        "from_ISO": "2019-06",
+        "to": "September 2020",
+        "to_ISO": "2020-09",
+        "description": "In my role as Full Stack Developer, I contributed to a platform enabling digital contracts, focusing on features for users to create and sign documents. Utilizing Vue.js and Vuex for the front end and Express with knex and MySQL for the backend, I also gained insights into payment gateway operations. Transitioning to a new project, I became part of a team developing a Jira-integrated application for running retro ceremonies. Responsibilities included understanding add-on development documentation, establishing the initial architecture, and implementing real-time functionality using server-sent events (SSE) and Redis store. We were following the practices of Scrum methodology on a daily basis. This experience enhanced collaborative skills within a dynamic team, and reinforced the importance of a proactive approach in the workplace.",
+        "bulletpoints": [
+          "Full-stack development on a platform that facilitates digital contracts between companies, using Vue.js with Nuxt on the front end, and a back end built with Express framework connected to a MySQL database.",
+          "Following strict Scrum practices to streamline our development process",
+          "Full refactoring and redesign of an admin site from Angular to Vue.js",
+          "Taking a crucial role in defining the functional requirements of an in-house product to facilitate retrospectives, and the development using TypeORM and React with Redux Toolkit"
+        ],
+        "next": "/career/two"
+      }
+    ]
+  }
 }

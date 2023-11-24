@@ -1,0 +1,43 @@
+{{#each cv.experiences}}
+  <div class="page print-one-line-header" data-pathname="{{this.path}}">
+    <header>
+      <h1 class="print-hidden">
+        {{this.title}}
+      </h1>
+      <h2 class="print-only">
+        {{this.company}}
+      </h2>
+      <div class="page__tagline">
+        <time datetime="{{this.from_ISO}}">
+          {{this.from}}
+        </time>
+        -
+        <time datetime="{{this.to_ISO}}">
+          {{this.to}}
+        </time>
+      </div>
+    </header>
+    <div class="page__description print-hidden">
+      <p>
+        {{this.description}}
+      </p>
+    </div>
+    <ul class="print-only bullet-points">
+      {{#each this.bulletpoints}}
+        <li>
+          {{this}}
+        </li>
+      {{/each}}
+    </ul>
+    {{#if this.back}}
+      <a class="btn btn--secondary" href="{{this.back}}">
+        Previous
+      </a>
+    {{/if}}
+    {{#if this.next}}
+      <a class="btn btn--primary" href="{{this.next}}">
+        Next
+      </a>
+    {{/if}}
+  </div>
+{{/each}}
