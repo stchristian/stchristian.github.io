@@ -17,6 +17,11 @@ module.exports = {
       preprocessor: "handlebars",
       preprocessorOptions: {
         partials: ["src/partials"],
+        helpers: {
+          ifEquals: function (arg1, arg2, options) {
+            return arg1 == arg2 ? options.fn(this) : options.inverse(this);
+          },
+        },
       },
       js: {
         // output filename of compiled JavaScript, used if `inline` option is false (defaults)

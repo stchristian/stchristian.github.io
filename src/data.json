@@ -62,5 +62,175 @@
         "next": "/career/two"
       }
     ]
+  },
+  "technologies": {
+    "front-end": [
+      {
+        "name": "React",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Redux",
+        "other": "Toolkit, Saga",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "React Testing Library",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "React Query",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "MUI React",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Lodash",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Fluent",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Nextjs",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Vue.js",
+        "labels": ["work", "out-of-date"]
+      },
+      {
+        "name": "Nuxt.js",
+        "labels": ["work", "out-of-date"]
+      },
+      {
+        "name": "Angular",
+        "labels": ["work", "out-of-date"]
+      },
+      {
+        "name": "TailwindCSS",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Styled Components",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Storybook",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "HTML",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "CSS",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Sass",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Bootstrap",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "React Native",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Webpack",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Jest",
+        "labels": ["work", "confident"]
+      }
+    ],
+    "back-end": [
+      {
+        "name": "Node.js",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "GraphQL",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Express",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "TypeORM",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "MongoDB",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "AWS Lambda",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "AWS Amplify",
+        "labels": ["confident"]
+      },
+      {
+        "name": "AWS S3",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Serverless",
+        "labels": ["confident"]
+      },
+      {
+        "name": "Firebase",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Redis",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Azure",
+        "other": "App Service, Pipelines",
+        "labels": ["work", "confident"]
+      }
+    ],
+    "other": [
+      {
+        "name": "Figma",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Insomnia",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Gitlab",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Github Actions",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Docker",
+        "labels": ["work", "confident"]
+      },
+      {
+        "name": "Stripe",
+        "labels": ["work"]
+      },
+      {
+        "name": "Shopify",
+        "labels": ["work", "out-of-date"]
+      }
+    ]
   }
 }
