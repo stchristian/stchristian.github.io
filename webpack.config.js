@@ -75,13 +75,21 @@ module.exports = {
         test: /\.css$/,
         use: ["css-loader"],
       },
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
   },
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
     },
     compress: true,
-    port: 9000,
+    port: 8080,
   },
 };

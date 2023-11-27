@@ -9,4 +9,5 @@ The print version of my site is my CV. To get the print version right click anyw
 ## TODO
 
 - Utilize handlebars more - adding data to data.json
-- Refactor JS
+- Refactor to TS
+- BEM refactoring
